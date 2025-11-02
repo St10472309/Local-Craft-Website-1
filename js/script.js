@@ -1,4 +1,3 @@
-// Local Craft - Complete JavaScript Implementation
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Local Craft Website Loaded');
     
@@ -12,7 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initInteractiveMap();
     initAnimations();
+    
+    
     highlightActiveNav();
+    
+    window.addEventListener('hashchange', highlightActiveNav);
 });
 
 // 1. MOBILE NAVIGATION
@@ -404,36 +407,38 @@ function initSmoothScrolling() {
 
 // 9. ACTIVE NAVIGATION
 function highlightActiveNav() {
-    const currentPage = location.pathname.split('/').pop();
-    document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
-        if (link.getAttribute('href') === currentPage) {
+    // Get current page filename
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    // Remove active class from all navigation items
+    const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    allNavLinks.forEach(link => {
+        link.classList.remove('active');
+        link.removeAttribute('aria-current');
+    });
+    
+    // Find and highlight the active link
+    allNavLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        // Check if this link matches the current page
+        if (linkHref === currentPage) {
             link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+        
+        // Special handling for home page
+        if (currentPage === 'index.html' && linkHref === 'index.html') {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+        
+        // Handle case when accessing root (no filename)
+        if ((currentPage === '' || currentPage === '/') && linkHref === 'index.html') {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
         }
     });
-}
-
-// Service search functionality
-function initServiceSearch() {
-    const searchInput = document.getElementById('serviceSearch');
-    if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const services = document.querySelectorAll('.service-category');
-            
-            services.forEach(service => {
-                const title = service.querySelector('h3').textContent.toLowerCase();
-                const description = service.querySelector('p').textContent.toLowerCase();
-                const items = service.querySelector('ul').textContent.toLowerCase();
-                
-                const matches = title.includes(searchTerm) || 
-                              description.includes(searchTerm) || 
-                              items.includes(searchTerm);
-                
-                service.style.display = matches ? 'block' : 'none';
-                if (matches) {
-                    service.style.animation = 'fadeIn 0.5s ease';
-                }
-            });
-        });
-    }
+    
+    console.log('Navigation updated. Current page:', currentPage);
 }
