@@ -1,8 +1,1 @@
-User-agent: *
-Allow: /
-
-# Don't crawl these (if you had them)
-Disallow: /admin/
-Disallow: /private/
-
-Sitemap: https://localcraft.com/sitemap.xml
+ 
