@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Local Craft</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="contact.html" class="logo-text"> <img src="Project/logo.png" alt="Local Craft Logo" class="logo-icon">
+                        Local Craft
+                    </a>
+                </div>
+                <nav class="desktop-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About Us</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                        <li><a href="enquiry.html" class="nav-link">Enquire</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+            
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="enquiry.html" class="mobile-nav-link">Enquire</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our team</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <h4>Address</h4>
+                        <p>123 Woodworking Street<br>Craftville, 0001<br>South Africa</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>(012) 345-6789</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>info@localcraft.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <input type="text" id="contactSubject" name="contactSubject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+<section class="map">
+    <div class="container">
+        <h2>Find Our Workshop</h2>
+        <div class="map-container">
+            <div id="interactiveMap" class="interactive-map">
+                <!-- Map will be loaded here by JavaScript -->
+                <div class="map-placeholder">
+                    <p>Loading map...</p>
+                </div>
+            </div>
+            <div class="map-info">
+                <h3>Visit Our Workshop</h3>
+                <p>123 Woodworking Street, Craftville, 0001, South Africa</p>
+                <p><strong>Hours:</strong> Mon-Fri 8am-5pm, Sat 9am-1pm</p>
+                <button id="getDirections" class="btn btn-primary">Get Directions</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <button class="faq-question">How long does a custom furniture project typically take?</button>
+                <div class="faq-answer">
+                    <p>The timeline varies based on the complexity of the project. Simple pieces may take 2-3 weeks, while more complex projects can take 6-8 weeks. During our consultation, we'll provide a detailed timeline for your specific project.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Do you offer free consultations?</button>
+                <div class="faq-answer">
+                    <p>Yes, we offer complimentary initial consultations to discuss your project needs, either in person at our workshop or via video call.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What types of wood do you work with?</button>
+                <div class="faq-answer">
+                    <p>We work with a variety of woods including oak, walnut, maple, pine, and exotic woods. We can help you select the best wood for your project based on your budget, style preferences, and functional requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-title">Local Craft</h3>
+                    <p class="footer-description">Premium carpentry and woodworking services since 2010. We blend traditional craftsmanship with modern sustainability.</p>
+                   
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="footer-nav">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="services.html" class="footer-link">Services</a></li>
+                        <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+                        <li><a href="enquiry.html" class="footer-link">Enquire</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-subtitle">Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> Email: info@localcraft.com</li>
+                        <li><i class="fas fa-phone"></i> Phone: (012) 345-6789</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Address: 123 Woodworking St, Craftville</li>
+                        <li><i class="fas fa-clock"></i> Hours: Mon-Fri 8am-5pm, Sat 9am-1pm</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 Local Craft. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" class="legal-link">Privacy Policy</a>
+                    <a href="#" class="legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
