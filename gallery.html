@@ -27,6 +27,18 @@
                         <li><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </nav>
+                <button class="mobile-nav-toggle" aria-label="Toggle navigation">☰</button>
+            
+            <nav class="mobile-nav">
+                <ul class="mobile-nav-links">
+                    <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+                    <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="mobile-nav-link">Gallery</a></li>
+                    <li><a href="enquiry.html" class="mobile-nav-link">Enquire</a></li>
+                    <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+                </ul>
+            </nav>
             </div>
         </div>
     </header>
@@ -38,6 +50,24 @@
             <p>Browse our collection of completed projects</p>
         </div>
     </section>
+    <!-- Gallery Search -->
+<section class="gallery-search">
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="gallerySearch" placeholder="Search projects...">
+            <button id="searchButton">🔍</button>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImage">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+    <button class="lightbox-nav lightbox-prev">&#10094;</button>
+    <button class="lightbox-nav lightbox-next">&#10095;</button>
+</div>
 
     <!-- Gallery Filters -->
     <section class="gallery-filters">
